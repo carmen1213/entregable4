@@ -10,5 +10,6 @@ public class Main {
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("http://www.fnac.es");
         // driver.quit();}
+
     }
 }
