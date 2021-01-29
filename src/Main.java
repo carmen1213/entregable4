@@ -68,10 +68,6 @@ public class Main {
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("https://www.pccomponentes.com/smartphones-gps");
 
-        System.out.println("Que producto quieres buscar: ");
-        String producto= sc.nextLine();
-
-
         WebElement cajaBusqueda =  driver.findElement(By.id("searcher"));
         cajaBusqueda.sendKeys(telefono);
         cajaBusqueda.submit();
@@ -85,10 +81,8 @@ public class Main {
         System.out.println("Estas en la pagina de PhoneHouse");
         int j=1;
         for (int i=1; i<4;i++){
-            String modelo=driver.findElement(By.xpath("")).getText();
-            String precio =driver.findElement(By.xpath("")).getText();
+            String modelo=driver.findElement(By.xpath("/html/body/header/div[3]/div[2]/section/div[2]/div[2]/ol/li["+i+"]/a")).getText();
             System.out.println(modelo);
-            System.out.println(precio);
             System.out.println("************************************************************************************");
         }
 
